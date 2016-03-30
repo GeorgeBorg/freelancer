@@ -1159,6 +1159,12 @@ Content
     .container--breakpoint-sm-hide {
       display: block; } }
 
+.container--link {
+  cursor: pointer;
+  height: 100%; }
+  .container--link:hover {
+    opacity: 0.5; }
+
 /* --------------------------------------------------
    Slider
 -------------------------------------------------- */

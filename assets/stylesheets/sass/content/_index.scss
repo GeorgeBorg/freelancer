@@ -390,7 +390,6 @@ Content
 	@include breakpoint(medium) {
 		display: none;
 	}
-
 }
 
 @include bem-block(container, breakpoint-sm-hide) {
@@ -399,7 +398,15 @@ Content
 	@include breakpoint(medium) {
 		display: block;
 	}
+}
 
+@include bem-block(container, link) {
+	cursor: pointer;
+	height: 100%;
+	
+	&:hover {
+		opacity: 0.5;
+	}
 }
 
 /* --------------------------------------------------

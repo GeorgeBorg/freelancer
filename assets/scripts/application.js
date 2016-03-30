@@ -1,4 +1,13 @@
 /* --------------------------------------------------
+   Slider Initialise
+-------------------------------------------------- */
+
+$(document).on('ready page:load', function () {
+    $('.slider').sss();
+});
+
+
+/* --------------------------------------------------
    Topbar on scroll
 -------------------------------------------------- */
 $(window).scroll(function(){
@@ -146,3 +155,4 @@ function scaleBannerVideoSize(element){
 
     });
 }
+
