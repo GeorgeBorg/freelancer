@@ -182,8 +182,13 @@
 
 	@include bem-element(icon) {
 		@include font-size(60);
-		color: $grey8;
+		color: $grey-blue;
 	}
+	
+	@include bem-element(icon, black) {
+		color: $grey2;
+	}
+
 
 	@include bem-element(circle) {
 		overflow: hidden;
@@ -193,7 +198,15 @@
 	}
 
 	@include bem-element(image) {
-		width: 65%;
+		width: 85%;
+		
+		@include breakpoint(small-medium) {
+			width: 75%;
+		}
+
+		@include breakpoint(medium) {
+			width: 65%;
+		}	
 	}
 
 	@include bem-element(image, circle) {
@@ -201,7 +214,19 @@
 	}
 
 	@include bem-element(image, small) {
-		width: 190px;	
+		width: 70%;
+		
+		@include breakpoint(small) {
+			width: 50%;
+		}
+		
+		@include breakpoint(small-medium) {
+			width: 40%;
+		}
+
+		@include breakpoint(medium) {
+			width: 100%;
+		}	
 	}
 }
 
@@ -216,7 +241,7 @@
 @include bem-block(container, third) {
 	width: 100%;
 	
-	@include breakpoint(small-medium) {
+	@include breakpoint(medium) {
 		width: 33.333333%;
 	}
 }
@@ -273,6 +298,26 @@
 	}
 }
 
+
+@include bem-block(container, right) {
+	float: left;
+
+	@include breakpoint(medium) {
+		float: right;
+	}
+}
+
+@include bem-block(container, min_height) {
+	min-height: 345px;
+}
+
+@include bem-block(container, half-breakpoint-medium) {
+	width: 100%;
+	
+	@include breakpoint(medium) {
+		width: 50%;
+	}
+}
 
 @include bem-block(container, link) {
 	cursor: pointer;

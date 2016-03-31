@@ -11,7 +11,7 @@ $.fn.sss = function(options) {
 	startOn : 0,
 	speed : 3000,
 	transition : 1000,
-	arrows : true
+	arrows : false
 	}, options);
 
 	return this.each(function() {
