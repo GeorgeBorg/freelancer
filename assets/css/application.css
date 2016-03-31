@@ -1073,6 +1073,8 @@ Content
     color: #FECD2F; }
   .container .container__icon--blue {
     color: #0191C8; }
+  .container .container__icon--black {
+    color: #222; }
   .container .container__icon--green {
     color: #37A283;
     margin-top: 20px; }
@@ -1087,14 +1089,29 @@ Content
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */ }
   .container .container__image {
-    width: 65%; }
+    width: 85%; }
+    @media (min-width: 634px) {
+      .container .container__image {
+        width: 75%; } }
+    @media (min-width: 768px) {
+      .container .container__image {
+        width: 65%; } }
   .container .container__image--circle {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */ }
   .container .container__image--small {
-    width: 190px; }
+    width: 70%; }
+    @media (min-width: 520px) {
+      .container .container__image--small {
+        width: 50%; } }
+    @media (min-width: 634px) {
+      .container .container__image--small {
+        width: 40%; } }
+    @media (min-width: 768px) {
+      .container .container__image--small {
+        width: 100%; } }
 
 .container--small-padding {
   padding: 5px 20px; }
@@ -1104,7 +1121,7 @@ Content
 
 .container--third {
   width: 100%; }
-  @media (min-width: 634px) {
+  @media (min-width: 768px) {
     .container--third {
       width: 33.333333%; } }
 
@@ -1147,6 +1164,12 @@ Content
     .container--center-left-text {
       text-align: left; } }
 
+.container--right {
+  float: left; }
+  @media (min-width: 768px) {
+    .container--right {
+      float: right; } }
+
 .container--breakpoint-sm-show {
   display: block; }
   @media (min-width: 768px) {
@@ -1158,6 +1181,15 @@ Content
   @media (min-width: 768px) {
     .container--breakpoint-sm-hide {
       display: block; } }
+
+.container--min_height {
+  min-height: 345px; }
+
+.container--half-breakpoint-medium {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .container--half-breakpoint-medium {
+      width: 50%; } }
 
 .container--link {
   cursor: pointer;
