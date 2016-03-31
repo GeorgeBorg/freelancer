@@ -1,11 +1,4 @@
 /* --------------------------------------------------
-Content
--------------------------------------------------- */
-.content {
-	background-color: $white;
-}
-
-/* --------------------------------------------------
    Sections
 -------------------------------------------------- */
 
@@ -56,16 +49,6 @@ Content
 	@include bem-element(text, small) {
 		@include font-size(18);
 	}
-
-	@include bem-element(infographic) {
-		width: 100%;
-		margin: 50px auto;
-		display: none;
-		
-		@include breakpoint(medium) {
-			display:block;
-		}
-	}
 	
 	@include bem-element(icon, blue) {
 		@include font-size(90);
@@ -86,10 +69,6 @@ Content
 		width: 180px;
 		height: 180px;
 	}
-}
-
-@include bem-block(section, green) {
-	background-color: $green3;
 }
 
 @include bem-block(section, blue) {
@@ -201,100 +180,11 @@ Content
 		}
 	}
 
-	@include bem-element(icon-border) {
-		margin: 0 auto;
-		border: solid $grey-blue 2px;
-		border-radius: 50%;
-		width: 150px;
-		height: 150px;
-		background-color: transparent;
-	}
-
-	@include bem-element(icon-border, small) {
-		width: 100px;
-		height: 100px;
-	}
-
-	@include bem-element(icon-border, medium) {
-		width: 130px;
-		height: 130px;
-	}
-
-	@include bem-element(icon-border, white) {
-		border: none;
-		background-color: $white;
-	}
-
-	@include bem-element(icon-border, blue) {
-		border: none;
-		background-color: $blue1;
-	}
-
-	@include bem-element(icon-border, yellow) {
-		border: none;
-		background-color: $yellow1;
-	}
-
-	@include bem-element(icon-border, red) {
-		border: none;
-		background-color: $red1;
-	}
-
-	@include bem-element(icon-border, green) {
-		border: none;
-		background-color: $green2;
-	}
-
 	@include bem-element(icon) {
-		margin:10px 0 ;
 		@include font-size(60);
-		color: $grey-blue;
+		color: $grey8;
 	}
 
-	@include bem-element(icon, small) {
-		@include font-size(40);
-		margin: 0;
-	}
-
-	@include bem-element(icon, medium) {
-		@include font-size(80);
-		margin: 25px 0;
-	}
-
-	@include bem-element(icon, large) {
-		@include font-size(100);
-		margin: 30px 0;
-	}
-
-	@include bem-element(icon, float-left) {
-		float: left;
-	}
-
-	@include bem-element(icon, white) {
-		color: $white;
-	}
-
-	@include bem-element(icon, red) {
-		color: $red1;
-	}
-
-	@include bem-element(icon, yellow) {
-		color: $yellow1;
-	}
-
-	@include bem-element(icon, blue) {
-		color: $blue2;
-	}
-
-	@include bem-element(icon, green) {
-		color: $green4;
-		margin-top: 20px;
-	}
-
-	@include bem-element(icon, number) {
-		line-height: 85px ;	
-	}
-	
 	@include bem-element(circle) {
 		overflow: hidden;
 		width: 190px;
@@ -329,7 +219,6 @@ Content
 	@include breakpoint(small-medium) {
 		width: 33.333333%;
 	}
-
 }
 
 @include bem-block(container, third-small) {
@@ -384,28 +273,13 @@ Content
 	}
 }
 
-@include bem-block(container, breakpoint-sm-show) {
-	display: block;
-	
-	@include breakpoint(medium) {
-		display: none;
-	}
-}
-
-@include bem-block(container, breakpoint-sm-hide) {
-	display: none;
-	
-	@include breakpoint(medium) {
-		display: block;
-	}
-}
 
 @include bem-block(container, link) {
 	cursor: pointer;
 	height: 100%;
 	
 	&:hover {
-		opacity: 0.5;
+		opacity: 0.9;
 	}
 }
 

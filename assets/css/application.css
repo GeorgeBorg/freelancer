@@ -609,13 +609,8 @@ Hacks
   text-align: center;
   height: 60px;
   color: #FFF; }
-  .topbar .topbar__logoIcon {
-    line-height: 60px;
-    height: 60px;
-    padding: 10px 5px 10px 10px;
-    float: left; }
   .topbar .topbar__logoText {
-    margin: 0;
+    margin: 0 30px;
     letter-spacing: 1px;
     float: left;
     line-height: 60px;
@@ -635,7 +630,7 @@ Hacks
         display: none; } }
 
 .topbar--scrolled {
-  background-color: #0191C8; }
+  background-color: #25A0CF; }
 
 .nav {
   text-align: center;
@@ -756,40 +751,6 @@ Hacks
         /* Safari */
         transform: scale(1.3, 1.3); }
 
-.no-video .video-container video,
-.touch .video-container video {
-  display: none; }
-
-.no-video .video-container .poster,
-.touch .video-container .poster {
-  display: block !important; }
-
-.video-container {
-  overflow: hidden; }
-  .video-container video::-webkit-media-controls {
-    display: none !important; }
-
-.video-container .poster img {
-  width: 100%;
-  top: 0;
-  position: absolute;
-  min-height: 350px; }
-
-.video-container .filter {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  width: 100%; }
-
-.video-container__video {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  z-index: -5; }
-
-.video-container video.fillWidth {
-  width: 100%; }
-
 /* --------------------------------------------------
    Hero
 -------------------------------------------------- */
@@ -797,69 +758,36 @@ Hacks
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   min-height: 350px;
+  background-color: rgba(1, 145, 200, 0.8);
   margin: 0;
   color: #FFF;
-  padding: 30px;
-  text-align: left;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)); }
-  @media (min-width: 634px) {
-    .hero {
-      padding: 110px 60px; } }
-  .hero .hero__header {
+  text-align: center; }
+  .hero .hero__image {
+    width: 100%;
     position: absolute;
-    bottom: 175px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin-top: -100px; }
+  .hero .hero__header {
     font-size: 50px;
     font-size: 5rem;
-    margin-top: 160px;
-    margin-bottom: 40px;
-    color: #FFF;
-    text-align: center; }
+    margin-top: 180px;
+    color: #FFF; }
     @media (min-width: 634px) {
       .hero .hero__header {
-        text-align: left;
-        margin-top: 160px;
-        margin-bottom: 40px;
         font-size: 65px;
         font-size: 6.5rem; } }
-    .hero .hero__header b {
-      font-weight: 800; }
   .hero .hero__subheader {
     font-size: 18px;
     font-size: 1.8rem;
-    margin-top: 25px;
-    transition: all 0.8s;
-    position: absolute;
-    bottom: 30px;
-    width: 80%; }
+    margin-top: 25px; }
     @media (min-width: 768px) {
       .hero .hero__subheader {
-        width: 100%;
         font-size: 22px;
         font-size: 2.2rem; } }
-  .hero .prompter {
-    position: absolute;
-    bottom: 80px;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    text-align: left;
-    height: 55px;
-    width: 100%; }
-    .hero .prompter .promp-top.inactive {
-      opacity: 0;
-      top: -64px; }
-    .hero .prompter .promp-top.active {
-      top: -34px;
-      opacity: 1; }
-    .hero .prompter .promp-top, .hero .prompter .promp-bottom {
-      position: absolute; }
-    .hero .prompter .promp-bottom.inactive {
-      opacity: 0;
-      top: 25px; }
-    .hero .prompter .promp-bottom.active {
-      opacity: 1;
-      top: 15px; }
   .hero .hero__button {
     text-align: center;
     font-size: 50px;
@@ -874,12 +802,6 @@ Hacks
     cursor: pointer;
     -webkit-animation: pulsate 2s ease-out;
     -webkit-animation-iteration-count: infinite; }
-
-/* --------------------------------------------------
-Content
--------------------------------------------------- */
-.content {
-  background-color: #FFF; }
 
 /* --------------------------------------------------
    Sections
@@ -918,18 +840,11 @@ Content
   .section .section__text--small {
     font-size: 18px;
     font-size: 1.8rem; }
-  .section .section__infographic {
-    width: 100%;
-    margin: 50px auto;
-    display: none; }
-    @media (min-width: 768px) {
-      .section .section__infographic {
-        display: block; } }
   .section .section__icon--blue {
     font-size: 90px;
     font-size: 9rem;
     margin: 45px auto;
-    color: #0191C8; }
+    color: #25A0CF; }
   .section .section__icon--red {
     font-size: 120px;
     font-size: 12rem;
@@ -942,11 +857,8 @@ Content
     width: 180px;
     height: 180px; }
 
-.section--green {
-  background-color: #3BC889; }
-
 .section--blue {
-  background-color: #0191C8; }
+  background-color: #25A0CF; }
 
 .section--grey {
   background-color: #F4F4F4; }
@@ -1018,66 +930,10 @@ Content
     @media (min-width: 634px) {
       .container .container__text--align-center-left {
         text-align: left; } }
-  .container .container__icon-border {
-    margin: 0 auto;
-    border: solid #8C8984 2px;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    background-color: transparent; }
-  .container .container__icon-border--small {
-    width: 100px;
-    height: 100px; }
-  .container .container__icon-border--medium {
-    width: 130px;
-    height: 130px; }
-  .container .container__icon-border--white {
-    border: none;
-    background-color: #FFF; }
-  .container .container__icon-border--blue {
-    border: none;
-    background-color: #005B9A; }
-  .container .container__icon-border--yellow {
-    border: none;
-    background-color: #FECD2F; }
-  .container .container__icon-border--red {
-    border: none;
-    background-color: #E66B5C; }
-  .container .container__icon-border--green {
-    border: none;
-    background-color: #83E1B6; }
   .container .container__icon {
-    margin: 10px 0;
     font-size: 60px;
     font-size: 6rem;
-    color: #8C8984; }
-  .container .container__icon--small {
-    font-size: 40px;
-    font-size: 4rem;
-    margin: 0; }
-  .container .container__icon--medium {
-    font-size: 80px;
-    font-size: 8rem;
-    margin: 25px 0; }
-  .container .container__icon--large {
-    font-size: 100px;
-    font-size: 10rem;
-    margin: 30px 0; }
-  .container .container__icon--float-left {
-    float: left; }
-  .container .container__icon--white {
-    color: #FFF; }
-  .container .container__icon--red {
-    color: #E66B5C; }
-  .container .container__icon--yellow {
-    color: #FECD2F; }
-  .container .container__icon--blue {
-    color: #0191C8; }
-  .container .container__icon--green {
-    color: #37A283;
-    margin-top: 20px; }
-  .container .container__icon--number {
-    line-height: 85px; }
+    color: #888; }
   .container .container__circle {
     overflow: hidden;
     width: 190px;
@@ -1147,23 +1003,11 @@ Content
     .container--center-left-text {
       text-align: left; } }
 
-.container--breakpoint-sm-show {
-  display: block; }
-  @media (min-width: 768px) {
-    .container--breakpoint-sm-show {
-      display: none; } }
-
-.container--breakpoint-sm-hide {
-  display: none; }
-  @media (min-width: 768px) {
-    .container--breakpoint-sm-hide {
-      display: block; } }
-
 .container--link {
   cursor: pointer;
   height: 100%; }
   .container--link:hover {
-    opacity: 0.5; }
+    opacity: 0.9; }
 
 /* --------------------------------------------------
    Slider
