@@ -64,7 +64,41 @@ $(document).on('ready page:load', function () {
 $(document).on('ready page:load', function () {
       $(".home-link").click(function() {
         $('html,body').animate({
-            scrollTop: $("#home").offset().top},
+            scrollTop: $("#hero").offset().top},
+            1000,'easeOutQuart')
+        });
+});
+
+
+$(document).on('ready page:load', function () {
+      $(".services-link").click(function() {
+        $('html,body').animate({
+            scrollTop: $("#services").offset().top},
+            1000,'easeOutBack')
+        });
+});
+
+
+$(document).on('ready page:load', function () {
+      $(".portfolio-link").click(function() {
+        $('html,body').animate({
+            scrollTop: $("#portfolio").offset().top},
+            1000,'easeOutBack')
+        });
+});
+
+$(document).on('ready page:load', function () {
+      $(".who-link").click(function() {
+        $('html,body').animate({
+            scrollTop: $("#who").offset().top},
+            1000,'easeOutBack')
+        });
+});
+
+$(document).on('ready page:load', function () {
+      $(".contact-link").click(function() {
+        $('html,body').animate({
+            scrollTop: $("#contact").offset().top},
             1000,'easeOutQuart')
         });
 });
