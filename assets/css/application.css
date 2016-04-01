@@ -1026,7 +1026,7 @@ Hacks
     .container--right {
       float: right; } }
 
-.container--min_height {
+.container--min-height {
   min-height: 345px; }
 
 .container--half-breakpoint-medium {
