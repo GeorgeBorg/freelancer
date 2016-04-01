@@ -348,7 +348,7 @@
 	}
 }
 
-@include bem-block(container, min_height) {
+@include bem-block(container, min-height) {
 	min-height: 345px;
 }
 
