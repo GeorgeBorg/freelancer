@@ -190,3 +190,22 @@ function scaleBannerVideoSize(element){
     });
 }
 
+/* --------------------------------------------------
+   Contact Form
+-------------------------------------------------- */
+
+    $(function() {
+        $('.contact-thank').hide();
+
+        $('.contact-submit').click(function() {
+            $.post('mailhandler.php', { email: $('.contact-email').val(), name: $('.contact-name').val(), message: $('.contact-message').val() })
+                .done(function(data) {
+                    console.log(data);
+                    $('.contact-name').val('');
+                    $('.contact-email').val('');
+                    $('.contact-message').val('');
+                    $('.contact-submit').hide();
+                    $('.contact-thank').show();                 
+                });
+        });
+    });

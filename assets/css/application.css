@@ -1112,6 +1112,39 @@ Content
     @media (min-width: 768px) {
       .container .container__image--small {
         width: 100%; } }
+  .container .container__input {
+    width: 90%;
+    height: 30px;
+    padding: 8px;
+    margin: 10px;
+    border-style: none;
+    color: #8C8984;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 25px;
+    background-color: #F4F4F4; }
+    @media (min-width: 768px) {
+      .container .container__input {
+        width: 70%; } }
+  .container .container__input--message {
+    height: 100px; }
+  .container .container__button {
+    width: 50%;
+    height: 50px;
+    display: block;
+    font-weight: 200;
+    background-color: #0191C8;
+    margin: 5% auto;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 18px;
+    font-size: 1.8rem;
+    border-style: none;
+    -webkit-appearance: none; }
+    @media (min-width: 768px) {
+      .container .container__button {
+        width: 30%; } }
 
 .container--small-padding {
   padding: 5px 20px; }
