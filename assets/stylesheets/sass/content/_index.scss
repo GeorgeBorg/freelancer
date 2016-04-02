@@ -186,7 +186,7 @@
 	}
 	
 	@include bem-element(icon, black) {
-		color: $grey2;
+		color: $footer;
 	}
 
 	@include bem-element(icon, blue) {
@@ -305,6 +305,10 @@
 @include bem-block(container, third) {
 	width: 100%;
 	
+	@include breakpoint(small-medium) {
+		width: 50%;
+	}
+	
 	@include breakpoint(medium) {
 		width: 33.333333%;
 	}
@@ -372,7 +376,11 @@
 }
 
 @include bem-block(container, min-height) {
-	min-height: 345px;
+	min-height: 0;
+
+	@include breakpoint(medium) {
+		min-height: 345px;
+	}
 }
 
 @include bem-block(container, half-breakpoint-medium) {
