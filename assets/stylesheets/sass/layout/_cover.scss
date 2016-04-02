@@ -5,25 +5,30 @@
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	height: 80vh;
-	min-height:350px;
+	height: 100vh;
 	background-color: rgba(1,145,200,0.8);
 	margin: 0;
 	color:$white;
 	text-align: center;
 
 	@include bem-element(image) {
-		width: 100%;
+		height: 100%;
 		position: absolute;
-		top: 0;
+		bottom: 0;
+		margin: 0 auto;
+		width: auto;
 		left: 0;
 		z-index: -1;
-		margin-top: -100px;
+		
+		@include breakpoint(medium-large) {
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	@include bem-element(header) {
 		@include font-size(50);
-		margin-top: 180px;
+		margin-top: 250px;
 		color: $white;
 
 		@include breakpoint(small-medium) {
@@ -40,19 +45,44 @@
 		}
 	}
 
+	@include bem-element(icon) {
+		color: $red1;
+		@include font-size(20);
+	}
+
 	@include bem-element(button) {
 		text-align: center;
 		@include font-size(50);
 		margin: 0 auto;
-		width: 50px;
-		color:$white;
-		position: absolute;
+		width: 100px;
 		left: 0;
 		right: 0;
+		color:$white;
+		position: absolute;
 		bottom: 60px;
 		cursor: pointer;
 		-webkit-animation: pulsate 2s ease-out;
 		-webkit-animation-iteration-count: infinite; 
+	}
+
+	@include bem-element(button-text) {
+		opacity: 0;
+		position: absolute;
+		bottom: 65px;
+		margin: 0 auto;
+		left: 0;
+		right: 0;	
+		transition: all 1.2s;
+		text-align: center;
+		color:$white;
+		background-color: transparent;
+		@include font-size(16);
+	}
+
+	.showed {
+		opacity: 1;
+		transition: all 1.2s;
+		bottom: 120px;
 	}
 
 }

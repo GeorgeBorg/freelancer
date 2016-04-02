@@ -11,7 +11,7 @@
 	@include bem-element(header) {
 		color: $grey8;
 		@include font-size(30);
-		font-weight:800;
+		font-weight:400;
 	}
 
 	@include bem-element(header, black) {
@@ -186,7 +186,7 @@
 	}
 
 	@include bem-element(icon, small) {
-		@include font-size(18);
+		@include font-size(25);
 		color: $grey-blue;
 	}
 	
@@ -273,41 +273,37 @@
 
 	@include bem-element(input) {
 		width: 90%;
-	    height: 30px;
-	    padding: 8px;
-	    margin: 10px;
-	    border-style: none;
-   		color: $grey-blue;
+		height: 30px;
+		padding: 8px;
+		margin: 10px;
+		border-style: none;
+		color: $grey-blue;
 		@include font-size(18);
 		line-height: 25px;
-	    background-color: $lightgrey;
-	    
-	    @include breakpoint(medium) {
-	    	width: 70%;
-	    }
+		background-color: $lightgrey;
+
+		@include breakpoint(medium) {
+			width: 70%;
+		}
 	}
 
 	@include bem-element(input, message) {
-	    height: 150px;
+		height: 150px;
+		resize: none;
 	}
 	
 	@include bem-element(button-shadow) {
 		position: relative;
 		width: 50%;
-	    height: 50px;
-	    display: block;
-	    font-weight: 200;
-	    background-color: darken($blue2, 10%);
-	    margin: 5% auto;
-	    font-size: 1.3rem;
-	    cursor: pointer;
-	    color: $white;
-		@include font-size(18);
-	    border-style: none;
-	    border-radius: 4px ;
+		height: 50px;
+		display: block;
+		background-color: darken($blue2, 10%);
+		margin: 5% auto;
+		border-style: none;
+		border-radius: 4px ;
 		    
-	    @include breakpoint(medium) {
-		    width: 30%;
+		@include breakpoint(medium) {
+			width: 30%;
 		}
 	}
 
@@ -315,28 +311,24 @@
 		position: relative;
 		top: -6px;
 		width: 100%;
-	    height: 100%;
-	    display: block;
-	    font-weight: 200;
-	    background-color: $blue2;
-	    margin: 5% auto;
-	    font-size: 1.3rem;
-	    cursor: pointer;
-	    color: $white;
+		height: 100%;
+		display: block;
+		font-weight: 200;
+		background-color: $blue2;
+		margin: 5% auto;
+		font-size: 1.3rem;
+		cursor: pointer;
+		color: $white;
 		@include font-size(18);
-	    border-style: none;
-	    border-radius: 4px ;
-	    -webkit-appearance: none;
-	    -webkit-transition: top 150ms linear;
-	    -moz-transition: top 150ms linear;
-	    transition: top 150ms linear;	    
-	    
-	    &:hover {
-	    	top: -2px;
-	    }
+		border-style: none;
+		border-radius: 4px ;
+		transition: all 0.15s;
+		-webkit-appearance: none;
+	}	
+
+	@include bem-element(button, $pseudo-class: hover) {
+		top: -2px;
 	}
-
-
 }
 
 @include bem-block(container, small-padding) {

@@ -38,6 +38,7 @@
 @include bem-block(topbar, scrolled) {
 	background-color: $blue2;
 	position: fixed;
+	transition: all 1.2s;
 }
 
 

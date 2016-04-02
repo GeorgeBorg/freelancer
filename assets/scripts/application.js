@@ -103,6 +103,20 @@ $(document).on('ready page:load', function () {
             1000,'easeOutQuart')
         });
 });
+
+/* --------------------------------------------------
+   Hero Button show P
+-------------------------------------------------- */
+$(document).on('ready page:load', function () {
+      $(".hero__button").mouseover(function() {
+        $('.hero__button-text').addClass('showed');
+        });
+
+      $(".hero__button").mouseout(function() {
+        $('.hero__button-text').removeClass('showed');
+        });
+
+});
 /* --------------------------------------------------
    Contact Form
 -------------------------------------------------- */

@@ -18,25 +18,12 @@
   }
 }
 
-@mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 @-webkit-keyframes pulsate {
     0% {-webkit-transform: scale(1)}
     50% {-webkit-transform: scale(1.15)}
     100% {-webkit-transform: scale(1)}
 }
 
-@-webkit-keyframes pulsate {
-    0% {-webkit-transform: scale(1)}
-    50% {-webkit-transform: scale(1.15)}
-    100% {-webkit-transform: scale(1)}
-}
 @mixin font-size($sizeValue: 1.6) {
 	font-size: $sizeValue + px;
 	font-size: ($sizeValue / 10) + rem;
