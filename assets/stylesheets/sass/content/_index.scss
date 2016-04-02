@@ -181,12 +181,17 @@
 	}
 
 	@include bem-element(icon) {
-		@include font-size(60);
+		@include font-size(40);
+		color: $grey-blue;
+	}
+
+	@include bem-element(icon, small) {
+		@include font-size(18);
 		color: $grey-blue;
 	}
 	
 	@include bem-element(icon, black) {
-		color: $footer;
+		color: $grey4;
 	}
 
 	@include bem-element(icon, blue) {
@@ -232,6 +237,13 @@
 		}	
 	}
 
+	@include bem-element(image-border) {
+		overflow: hidden;
+		border:2px solid $white;
+		@include prefix(border-radius, 50%);
+		@include prefix(box-shadow, 0px 3px 0 rgba(0,0,0,0.1));
+	}
+
 	@include bem-element(image, circle) {
 		@include border-radius(50%);
 	}
@@ -269,13 +281,30 @@
 	}
 
 	@include bem-element(input, message) {
-	    height: 150px;
-	    resize: none;
+		height: 150px;
+		resize: none;
+	}
+	
+	@include bem-element(button-shadow) {
+		position: relative;
+		width: 50%;
+		height: 50px;
+		display: block;
+		background-color: darken($blue2, 10%);
+		margin: 5% auto;
+		border-style: none;
+		border-radius: 4px ;
+		    
+		@include breakpoint(medium) {
+			width: 30%;
+		}
 	}
 
 	@include bem-element(button) {
-		width: 50%;
-		height: 50px;
+		position: relative;
+		top: -6px;
+		width: 100%;
+		height: 100%;
 		display: block;
 		font-weight: 200;
 		background-color: $blue2;
@@ -285,12 +314,14 @@
 		color: $white;
 		@include font-size(18);
 		border-style: none;
+		border-radius: 4px ;
+		transition: all 0.15s;
 		-webkit-appearance: none;
-
-		@include breakpoint(medium) {
-			width: 30%;
-		}
 	}	
+
+	@include bem-element(button, $pseudo-class: hover) {
+		top: -2px;
+	}
 }
 
 @include bem-block(container, small-padding) {
@@ -376,9 +407,13 @@
 
 @include bem-block(container, min-height) {
 	min-height: 0;
+	
+	@include breakpoint(small-medium) {
+		min-height: 262px;
+	}
 
 	@include breakpoint(medium) {
-		min-height: 345px;
+		min-height: 302px;
 	}
 }
 
