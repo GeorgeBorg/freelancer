@@ -912,40 +912,46 @@ Hacks
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */ }
   .container .container__image {
-    width: 85%; }
-    @media (min-width: 634px) {
-      .container .container__image {
-        width: 75%; } }
-    @media (min-width: 768px) {
-      .container .container__image {
-        width: 65%; } }
-  .container .container__image-border {
-    overflow: hidden;
-    border: 2px solid #FFF;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 3px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 3px 0 rgba(0, 0, 0, 0.1);
-    -ms-box-shadow: 0px 3px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 3px 0 rgba(0, 0, 0, 0.1); }
-  .container .container__image--circle {
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
-  .container .container__image--small {
     width: 70%; }
-    @media (min-width: 520px) {
-      .container .container__image--small {
-        width: 50%; } }
+  .container .container__image-border {
+    width: 60%;
+    overflow: hidden;
+    border: 10px solid #FFF;
+    border-bottom: 30px solid #FFF;
+    margin: 0 auto;
+    border-radius: 2px;
+    -webkit-box-shadow: 3px 6px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 6px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 3px 6px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 6px 0 rgba(0, 0, 0, 0.1); }
+    .container .container__image-border:hover {
+      -webkit-transition: all 1s ease;
+      /* Safari and Chrome */
+      -moz-transition: all 1s ease;
+      /* Firefox */
+      -o-transition: all 1s ease;
+      /* IE 9 */
+      -ms-transition: all 1s ease;
+      /* Opera */
+      transition: all 1s ease;
+      -webkit-transform: scale(1.25);
+      /* Safari and Chrome */
+      -moz-transform: scale(1.1);
+      /* Firefox */
+      -ms-transform: scale(1.1);
+      /* IE 9 */
+      -o-transform: scale(1.1);
+      /* Opera */
+      transform: scale(1.1); }
     @media (min-width: 634px) {
-      .container .container__image--small {
+      .container .container__image-border {
         width: 40%; } }
     @media (min-width: 768px) {
-      .container .container__image--small {
+      .container .container__image-border {
         width: 100%; } }
+  .container .container__image--small {
+    width: 100%;
+    border-radius: 2px; }
   .container .container__input {
     width: 90%;
     height: 30px;

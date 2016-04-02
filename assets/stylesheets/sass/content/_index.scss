@@ -226,33 +226,30 @@
 	}
 
 	@include bem-element(image) {
-		width: 85%;
-		
-		@include breakpoint(small-medium) {
-			width: 75%;
-		}
-
-		@include breakpoint(medium) {
-			width: 65%;
-		}	
+		width: 70%;
 	}
 
 	@include bem-element(image-border) {
+		width: 60%;
 		overflow: hidden;
-		border:2px solid $white;
-		@include prefix(border-radius, 50%);
-		@include prefix(box-shadow, 0px 3px 0 rgba(0,0,0,0.1));
-	}
-
-	@include bem-element(image, circle) {
-		@include border-radius(50%);
-	}
-
-	@include bem-element(image, small) {
-		width: 70%;
+		border:10px solid $white;
+		border-bottom:30px solid $white;
+		margin: 0 auto;
+		border-radius: 2px;
+		// @include prefix(border-radius, 50%);
+		@include prefix(box-shadow, 3px 6px 0 rgba(0,0,0,0.1));  
 		
-		@include breakpoint(small) {
-			width: 50%;
+		&:hover{
+			-webkit-transition: all 1s ease; /* Safari and Chrome */
+		    -moz-transition: all 1s ease; /* Firefox */
+		    -o-transition: all 1s ease; /* IE 9 */
+		    -ms-transition: all 1s ease; /* Opera */
+		    transition: all 1s ease;
+		    -webkit-transform:scale(1.25); /* Safari and Chrome */
+		    -moz-transform:scale(1.1); /* Firefox */
+		    -ms-transform:scale(1.1); /* IE 9 */
+		    -o-transform:scale(1.1); /* Opera */
+		     transform:scale(1.1);
 		}
 		
 		@include breakpoint(small-medium) {
@@ -261,7 +258,17 @@
 
 		@include breakpoint(medium) {
 			width: 100%;
+			// margin: 0;
 		}	
+	}
+
+	@include bem-element(image, circle) {
+		// @include border-radius(50%);
+	}
+
+	@include bem-element(image, small) {
+		width: 100%;
+		border-radius:2px;	
 	}
 
 	@include bem-element(input) {
