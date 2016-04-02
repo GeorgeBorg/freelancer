@@ -44,12 +44,12 @@
 		text-align: center;
 		@include font-size(50);
 		margin: 0 auto;
-		width: 100%;
-		color:$green;
+		width: 50px;
+		color:$white;
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: -60px;
+		bottom: 60px;
 		cursor: pointer;
 		-webkit-animation: pulsate 2s ease-out;
 		-webkit-animation-iteration-count: infinite; 
