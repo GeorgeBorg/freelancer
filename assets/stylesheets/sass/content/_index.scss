@@ -254,44 +254,43 @@
 
 	@include bem-element(input) {
 		width: 90%;
-	    height: 30px;
-	    padding: 8px;
-	    margin: 10px;
-	    border-style: none;
-   		color: $grey-blue;
+		height: 30px;
+		padding: 8px;
+		margin: 10px;
+		border-style: none;
+		color: $grey-blue;
 		@include font-size(18);
 		line-height: 25px;
-	    background-color: $lightgrey;
-	    
-	    @include breakpoint(medium) {
-	    	width: 70%;
-	    }
+		background-color: $lightgrey;
+
+		@include breakpoint(medium) {
+			width: 70%;
+		}
 	}
 
 	@include bem-element(input, message) {
 	    height: 150px;
+	    resize: none;
 	}
 
 	@include bem-element(button) {
 		width: 50%;
-	    height: 50px;
-	    display: block;
-	    font-weight: 200;
-	    background-color: $blue2;
-	    margin: 5% auto;
-	    font-size: 1.3rem;
-	    cursor: pointer;
-	    color: $white;
+		height: 50px;
+		display: block;
+		font-weight: 200;
+		background-color: $blue2;
+		margin: 5% auto;
+		font-size: 1.3rem;
+		cursor: pointer;
+		color: $white;
 		@include font-size(18);
-	    border-style: none;
-	    -webkit-appearance: none;
-		    
-	    @include breakpoint(medium) {
-		    width: 30%;
+		border-style: none;
+		-webkit-appearance: none;
+
+		@include breakpoint(medium) {
+			width: 30%;
 		}
-	}
-
-
+	}	
 }
 
 @include bem-block(container, small-padding) {

@@ -48,13 +48,6 @@
     -webkit-transform: scale(1.15); }
   100% {
     -webkit-transform: scale(1); } }
-@-webkit-keyframes pulsate {
-  0% {
-    -webkit-transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.15); }
-  100% {
-    -webkit-transform: scale(1); } }
 /**************************************************
  * Sass mixins that allow you to write proper BEM
  * with one level nesting for cascading block
@@ -480,7 +473,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased; }
 
 /* --------------------------------------------------
@@ -633,7 +626,8 @@ Hacks
 
 .topbar--scrolled {
   background-color: #25A0CF;
-  position: fixed; }
+  position: fixed;
+  transition: all 1.2s; }
 
 .nav {
   text-align: center;
@@ -709,23 +703,27 @@ Hacks
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 80vh;
-  min-height: 350px;
+  height: 100vh;
   background-color: rgba(1, 145, 200, 0.8);
   margin: 0;
   color: #FFF;
   text-align: center; }
   .hero .hero__image {
-    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: auto;
     left: 0;
-    z-index: -1;
-    margin-top: -100px; }
+    z-index: -1; }
+    @media (min-width: 960px) {
+      .hero .hero__image {
+        width: 100%;
+        height: auto; } }
   .hero .hero__header {
     font-size: 50px;
     font-size: 5rem;
-    margin-top: 180px;
+    margin-top: 250px;
     color: #FFF; }
     @media (min-width: 634px) {
       .hero .hero__header {
@@ -739,20 +737,41 @@ Hacks
       .hero .hero__subheader {
         font-size: 22px;
         font-size: 2.2rem; } }
+  .hero .hero__icon {
+    color: #E66B5C;
+    font-size: 20px;
+    font-size: 2rem; }
   .hero .hero__button {
     text-align: center;
     font-size: 50px;
     font-size: 5rem;
     margin: 0 auto;
-    width: 50px;
-    color: #FFF;
-    position: absolute;
+    width: 100px;
     left: 0;
     right: 0;
+    color: #FFF;
+    position: absolute;
     bottom: 60px;
     cursor: pointer;
     -webkit-animation: pulsate 2s ease-out;
     -webkit-animation-iteration-count: infinite; }
+  .hero .hero__button-text {
+    opacity: 0;
+    position: absolute;
+    bottom: 65px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transition: all 1.2s;
+    text-align: center;
+    color: #FFF;
+    background-color: transparent;
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .hero .showed {
+    opacity: 1;
+    transition: all 1.2s;
+    bottom: 120px; }
 
 /* --------------------------------------------------
    Sections
@@ -946,7 +965,8 @@ Hacks
       .container .container__input {
         width: 70%; } }
   .container .container__input--message {
-    height: 150px; }
+    height: 150px;
+    resize: none; }
   .container .container__button {
     width: 50%;
     height: 50px;
