@@ -741,12 +741,12 @@ Hacks
     font-size: 50px;
     font-size: 5rem;
     margin: 0 auto;
-    width: 100%;
-    color: #3BB479;
+    width: 50px;
+    color: #FFF;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -60px;
+    bottom: 60px;
     cursor: pointer;
     -webkit-animation: pulsate 2s ease-out;
     -webkit-animation-iteration-count: infinite; }

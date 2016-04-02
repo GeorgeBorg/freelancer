@@ -84,6 +84,10 @@
 				transform: scaleX(1);
 			}
 		}
+
+		@include bem-element(link, $pseudo-class: hover) {
+			
+		}
 		
 		@include bem-element(link, $pseudo-class: before) {
 			content: "";
