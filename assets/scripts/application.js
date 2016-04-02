@@ -14,14 +14,13 @@ $(window).scroll(function(){
 
 	var scroll = $(window).scrollTop();
 
-              if (scroll > $('.scrollPoint').offset().top ) {
+            if (scroll > $('.scrollPoint').offset().top ) {
                     $('.topbar').addClass('topbar--scrolled');
-                    $('.top-bar-nav').addClass('other-nav-bar');
             }
 
-          if (scroll <= $('.scrollPoint').offset().top ) {
-            $('.topbar').removeClass('topbar--scrolled');
-          }
+            if (scroll <= $('.scrollPoint').offset().top ) {
+                    $('.topbar').removeClass('topbar--scrolled');
+            }
 
 });
 
@@ -32,13 +31,6 @@ $(window).scroll(function(){
 $(document).on('ready page:load', function () {
     $(".topbar__menu").click(function(e) {
         $(".nav").toggle();
-
-        if ($(".topbar").hasClass('topbar--scrolled')) {
-                $('.topbar').removeClass('topbar--scrolled');
-        } else {
-                $('.topbar').addClass('topbar--scrolled');
-        }
-
         e.stopPropagation();
     });
 

@@ -600,7 +600,7 @@ Hacks
   width: 100%;
   background-color: transparent;
   z-index: 5;
-  position: fixed;
+  position: absolute;
   top: 0;
   text-align: center;
   height: 60px;
@@ -626,18 +626,15 @@ Hacks
         display: none; } }
 
 .topbar--scrolled {
-  background-color: #25A0CF; }
+  background-color: #25A0CF;
+  position: fixed; }
 
 .nav {
   text-align: center;
-  display: none;
-  float: none;
-  margin-right: 0; }
+  display: none; }
   @media (min-width: 634px) {
     .nav {
-      display: block !important;
-      float: right;
-      margin-right: 20px; } }
+      display: block !important; } }
   .nav .nav__listItem {
     display: inline-block;
     background-color: #FFF;
@@ -649,14 +646,14 @@ Hacks
         line-height: 59px;
         background-color: transparent; } }
     .nav .nav__listItem .nav__link {
-      text-transform: capitalize;
+      font-variant: small-caps;
       color: #25A0CF;
       padding: 5px 10px;
       cursor: pointer;
       position: relative;
       font-weight: 400;
-      font-size: 16px;
-      font-size: 1.6rem;
+      font-size: 20px;
+      font-size: 2rem;
       letter-spacing: 1px; }
       @media (min-width: 634px) {
         .nav .nav__listItem .nav__link {

@@ -5,7 +5,7 @@
 	width: 100%;
 	background-color: transparent;
 	z-index: 5;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	text-align: center;
 	height: 60px;
@@ -37,19 +37,16 @@
 
 @include bem-block(topbar, scrolled) {
 	background-color: $blue2;
+	position: fixed;
 }
 
 
 @include bem-block(nav) {
 	text-align:center;
 	display:none;
-	float: none;
-	margin-right: 0;
 
 	@include breakpoint(small-medium) {
 		display:block !important;
-		float: right;
-		margin-right: 20px;
 	}
 
 	@include bem-element(listItem) {
@@ -65,13 +62,13 @@
 		}
 		
 		@include bem-element(link) {
-			text-transform: capitalize;
+			font-variant: small-caps;
 			color:$blue2;
 			padding:5px 10px;
 			cursor:pointer;
 			position: relative;
 			font-weight: 400;
-			@include font-size(16);
+			@include font-size(20);
 			letter-spacing: 1px;
 			
 			@include breakpoint(small-medium) {
