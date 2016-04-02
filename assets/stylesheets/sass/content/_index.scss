@@ -11,7 +11,7 @@
 	@include bem-element(header) {
 		color: $grey8;
 		@include font-size(30);
-		font-weight:800;
+		font-weight:400;
 	}
 
 	@include bem-element(header, black) {
@@ -186,7 +186,7 @@
 	}
 
 	@include bem-element(icon, small) {
-		@include font-size(18);
+		@include font-size(25);
 		color: $grey-blue;
 	}
 	
