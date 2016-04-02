@@ -66,7 +66,7 @@
 		
 		@include bem-element(link) {
 			text-transform: capitalize;
-			color:$green4;
+			color:$blue2;
 			padding:5px 10px;
 			cursor:pointer;
 			position: relative;
@@ -92,7 +92,7 @@
 			height: 1px;
 			bottom: -1px;
 			left: 0;
-			background-color: $green4;
+			background-color: $blue2;
 			-webkit-transform: scaleX(0);
 			transform: scaleX(0);
 			-webkit-transition: all 0.2s ease-in-out 0s;
