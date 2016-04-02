@@ -189,6 +189,29 @@
 		color: $grey2;
 	}
 
+	@include bem-element(icon, blue) {
+		color: $blue2;
+	}
+
+	@include bem-element(icon, red) {
+		color: $red1;
+	}
+	
+	@include bem-element(icon, green) {
+		color: $green2;
+	}
+
+	@include bem-element(icon, yellow) {
+		color: $yellow1;
+	}
+
+	@include bem-element(icon, pink) {
+		color: $pink1;
+	}
+
+	@include bem-element(icon, orange) {
+		color: $orange1;
+	}
 
 	@include bem-element(circle) {
 		overflow: hidden;
@@ -246,7 +269,7 @@
 	}
 
 	@include bem-element(input, message) {
-	    height: 100px;
+	    height: 150px;
 	}
 
 	@include bem-element(button) {

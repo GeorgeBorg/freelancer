@@ -38,6 +38,12 @@
 /* --------------------------------------------------
    Browns
 -------------------------------------------------- */
+/* --------------------------------------------------
+   Pink
+-------------------------------------------------- */
+/* --------------------------------------------------
+   Orange
+-------------------------------------------------- */
 @-webkit-keyframes pulsate {
   0% {
     -webkit-transform: scale(1); }
@@ -936,6 +942,18 @@ Hacks
     color: #8C8984; }
   .container .container__icon--black {
     color: #222; }
+  .container .container__icon--blue {
+    color: #25A0CF; }
+  .container .container__icon--red {
+    color: #E66B5C; }
+  .container .container__icon--green {
+    color: #83E1B6; }
+  .container .container__icon--yellow {
+    color: #FECD2F; }
+  .container .container__icon--pink {
+    color: #CD679A; }
+  .container .container__icon--orange {
+    color: #EF662A; }
   .container .container__circle {
     overflow: hidden;
     width: 190px;
@@ -983,7 +1001,7 @@ Hacks
       .container .container__input {
         width: 70%; } }
   .container .container__input--message {
-    height: 100px; }
+    height: 150px; }
   .container .container__button {
     width: 50%;
     height: 50px;
