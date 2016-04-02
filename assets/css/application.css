@@ -480,7 +480,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased; }
 
 /* --------------------------------------------------
@@ -882,11 +882,15 @@ Hacks
       .container .container__text--align-center-left {
         text-align: left; } }
   .container .container__icon {
-    font-size: 60px;
-    font-size: 6rem;
+    font-size: 40px;
+    font-size: 4rem;
+    color: #8C8984; }
+  .container .container__icon--small {
+    font-size: 18px;
+    font-size: 1.8rem;
     color: #8C8984; }
   .container .container__icon--black {
-    color: #313538; }
+    color: #444; }
   .container .container__icon--blue {
     color: #25A0CF; }
   .container .container__icon--red {
@@ -1027,9 +1031,12 @@ Hacks
 
 .container--min-height {
   min-height: 0; }
+  @media (min-width: 634px) {
+    .container--min-height {
+      min-height: 262px; } }
   @media (min-width: 768px) {
     .container--min-height {
-      min-height: 345px; } }
+      min-height: 302px; } }
 
 .container--half-breakpoint-medium {
   width: 100%; }

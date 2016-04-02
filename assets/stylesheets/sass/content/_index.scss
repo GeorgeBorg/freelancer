@@ -181,12 +181,17 @@
 	}
 
 	@include bem-element(icon) {
-		@include font-size(60);
+		@include font-size(40);
+		color: $grey-blue;
+	}
+
+	@include bem-element(icon, small) {
+		@include font-size(18);
 		color: $grey-blue;
 	}
 	
 	@include bem-element(icon, black) {
-		color: $footer;
+		color: $grey4;
 	}
 
 	@include bem-element(icon, blue) {
@@ -377,9 +382,13 @@
 
 @include bem-block(container, min-height) {
 	min-height: 0;
+	
+	@include breakpoint(small-medium) {
+		min-height: 262px;
+	}
 
 	@include breakpoint(medium) {
-		min-height: 345px;
+		min-height: 302px;
 	}
 }
 
