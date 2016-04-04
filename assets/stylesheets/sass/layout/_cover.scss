@@ -56,7 +56,7 @@
 		margin: 0 auto;
 		width: 100px;
 		left: 0;
-		right: 0;
+		right: 8px;
 		color:$white;
 		position: absolute;
 		bottom: 60px;
@@ -79,10 +79,9 @@
 		@include font-size(16);
 	}
 
-	.showed {
+	@include bem-element(button-text,showed) {
 		opacity: 1;
 		transition: all 1.2s;
 		bottom: 120px;
 	}
-
 }
