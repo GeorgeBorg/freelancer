@@ -9,27 +9,11 @@
 	@extend .group;
     
 	@include bem-element(header) {
-		color: $grey8;
+		color: $grey6;
 		@include font-size(30);
 		font-weight:400;
 	}
 
-	@include bem-element(header, black) {
-		color:$grey2;
-	}
-
-	@include bem-element(header, white) {
-		color:$white;
-	}
-	
-	@include bem-element(sub-header) {
-		@include font-size(24);
-		font-weight:500;
-	}
-
-	@include bem-element(sub-header, white) {
-		color:$white;
-	}
 
 	@include bem-element(text) {
 		padding: 10px;
@@ -45,43 +29,12 @@
 			padding: 10px 80px;
 		}
 	}
-
-	@include bem-element(text, small) {
-		@include font-size(18);
-	}
-	
-	@include bem-element(icon, blue) {
-		@include font-size(90);
-		margin: 45px auto;
-		color: $blue2;
-	}
-
-	@include bem-element(icon, red) {
-		@include font-size(120);
-		margin: 30px auto;
-		color: $red1;
-	}
-
-	@include bem-element(icon-border) {
-		margin: 50px auto;
-		border-radius: 50%;
-		background-color: $white;
-		width: 180px;
-		height: 180px;
-	}
-}
-
-@include bem-block(section, blue) {
-	background-color: $blue2;
 }
 
 @include bem-block(section, grey) {
 	background-color: $lightgrey;
 }
 
-@include bem-block(section, small-padding) {
-	padding: 10px 0;
-}
 
 
 /* --------------------------------------------------
@@ -99,45 +52,6 @@
 		@include font-size(22);
 	}
 
-	@include bem-element(header, number) {
-		color:$grey4;
-		@include font-size(70);
-		margin: 0;
-		padding: 0;
-	}
-
-	@include bem-element(header, small) {
-		@include font-size(20);
-	}
-
-	@include bem-element(header, large) {
-		@include font-size(28);
-	}
-
-	@include bem-element(header, white) {
-		color:$white;
-	}
-
-	@include bem-element(header, align-center-left) {
-		text-align: center;
-		
-		@include breakpoint(small-medium) {
-			text-align: left;
-		}
-	}
-
-	@include bem-element(header, align-left) {
-		text-align: left;
-	}
-
-	@include bem-element(header, align-center-left) {
-		text-align: center;
-		
-		@include breakpoint(small-medium) {
-			text-align: left;
-		}
-	}
-
 	@include bem-element(text) {
 		color: $grey-blue;
 		@include font-size(18);
@@ -146,38 +60,6 @@
 
 	@include bem-element(text, small) {
 		@include font-size(14);
-	}
-
-	@include bem-element(text, no-margin) {
-		margin: 0;
-	}
-
-	@include bem-element(text, white) {
-		color: $white;
-	}
-
-	@include bem-element(text, justify) {
-		text-align: justify;
-	}
-
-	@include bem-element(text, align-left) {
-		text-align: left;
-	}
-
-	@include bem-element(text, align-center-left) {
-		text-align: center;
-		
-		@include breakpoint(small-medium) {
-			text-align: left;
-		}
-	}
-
-	@include bem-element(text, align-center-left) {
-		text-align: center;
-		
-		@include breakpoint(small-medium) {
-			text-align: left;
-		}
 	}
 
 	@include bem-element(icon) {
@@ -191,23 +73,18 @@
 	}
 
 
-	@include bem-element(icon, scale) {
-		&:hover{
-			-webkit-transition: all 0.5s ease; /* Safari and Chrome */
-		    -moz-transition: all 0.5s ease; /* Firefox */
-		    -o-transition: all 0.5s ease; /* IE 9 */
-		    -ms-transition: all 0.5s ease; /* Opera */
-		    transition: all 0.5s ease;
-		    -webkit-transform:scale(1.2); /* Safari and Chrome */
-		    -moz-transform:scale(1.2); /* Firefox */
-		    -ms-transform:scale(1.2); /* IE 9 */
-		    -o-transform:scale(1.2); /* Opera */
-		    transform:scale(1.2);
-		}
-	}
-	
-	@include bem-element(icon, black) {
-		color: $grey4;
+	@include bem-element(icon, scale, hover) {
+		color:$grey4;
+		-webkit-transition: all 0.2s ease; /* Safari and Chrome */
+		-moz-transition: all 0.2s ease; /* Firefox */
+		-o-transition: all 0.2s ease; /* IE 9 */
+		-ms-transition: all 0.2s ease; /* Opera */
+		transition: all 0.2s ease;
+		-webkit-transform:scale(1.1); /* Safari and Chrome */
+		-moz-transform:scale(1.1); /* Firefox */
+		-ms-transform:scale(1.1); /* IE 9 */
+		-o-transform:scale(1.1); /* Opera */
+		transform:scale(1.1);
 	}
 
 	@include bem-element(icon, blue) {
@@ -234,15 +111,13 @@
 		color: $orange1;
 	}
 
-	@include bem-element(circle) {
-		overflow: hidden;
-		width: 190px;
-		height: 190px;
-		@include border-radius(50%);	
-	}
-
 	@include bem-element(image) {
-		width: 70%;
+		width: 80%;
+	}
+	
+	@include bem-element(image, small) {
+		width: 100%;
+		border-radius:2px;	
 	}
 
 	@include bem-element(image-border) {
@@ -253,19 +128,6 @@
 		margin: 0 auto;
 		border-radius: 2px;
 		@include prefix(box-shadow, 3px 6px 0 rgba(0,0,0,0.1));  
-		
-		&:hover{
-			-webkit-transition: all 0.5s ease; /* Safari and Chrome */
-		    -moz-transition: all 0.5s ease; /* Firefox */
-		    -o-transition: all 0.5s ease; /* IE 9 */
-		    -ms-transition: all 0.5s ease; /* Opera */
-		    transition: all 0.5s ease;
-		    -webkit-transform:scale(1.25); /* Safari and Chrome */
-		    -moz-transform:scale(1.1); /* Firefox */
-		    -ms-transform:scale(1.1); /* IE 9 */
-		    -o-transform:scale(1.1); /* Opera */
-		    transform:translate(0px, -5px);
-		}
 		
 		@include breakpoint(small-medium) {
 			width: 70%;
@@ -280,13 +142,13 @@
 		}
 	}
 
-	@include bem-element(image, circle) {
-		// @include border-radius(50%);
-	}
-
-	@include bem-element(image, small) {
-		width: 100%;
-		border-radius:2px;	
+	@include bem-element(image-border, $pseudo-class: hover) {
+		-webkit-transition: all 0.2s ease; /* Safari and Chrome */
+		-moz-transition: all 0.2s ease; /* Firefox */
+		-o-transition: all 0.2s ease; /* IE 9 */
+		-ms-transition: all 0.2s ease; /* Opera */
+		transition: all 0.2s ease;
+		transform:translate(0px, -2px);
 	}
 
 	@include bem-element(input) {
@@ -334,7 +196,6 @@
 		font-weight: 200;
 		background-color: $blue2;
 		margin: 5% auto;
-		font-size: 1.3rem;
 		cursor: pointer;
 		color: $white;
 		@include font-size(18);
@@ -349,14 +210,6 @@
 	}
 }
 
-@include bem-block(container, small-padding) {
-	padding: 5px 20px;
-}
-
-@include bem-block(container, wide-padding) {
-	padding: 20px 100px;
-}
-
 @include bem-block(container, third) {
 	width: 100%;
 	
@@ -369,30 +222,6 @@
 	}
 }
 
-@include bem-block(container, third-small) {
-	width: 33.33333%;
-}
-
-@include bem-block(container, two-third) {
-	width: 100%;
-	
-	@include breakpoint(small-medium) {
-		width: 66.666666666%;
-	}
-}
-
-@include bem-block(container, two-third-small) {
-	width: 66.666666666%;
-}
-
-@include bem-block(container, long-third) {
-	width: 100%;
-	
-	@include breakpoint(medium) {
-		width: 33.33333%;
-	}
-}
-
 @include bem-block(container, half) {
 	width: 100%;
 	
@@ -400,27 +229,6 @@
 		width: 50%;
 	}
 }
-
-@include bem-block(container, long-half) {
-	width: 100%;
-	
-	@include breakpoint(medium) {
-		width: 50%;
-	}
-}
-
-@include bem-block(container, center-text) {
-	text-align: center;
-}
-
-@include bem-block(container, center-left-text) {
-	text-align: center;
-	
-	@include breakpoint(small-medium) {
-		text-align: left;
-	}
-}
-
 
 @include bem-block(container, right) {
 	float: left;
@@ -453,9 +261,6 @@
 @include bem-block(container, half-breakpoint-medium-large) {
 	width: 100%;
 	padding: 0;
-	// @include breakpoint(medium) {
-	// 	width: 50%;
-	// }
 
 	@include breakpoint(medium-large) {
 		width: 50%;
