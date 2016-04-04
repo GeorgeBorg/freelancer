@@ -908,6 +908,25 @@ Hacks
     font-size: 25px;
     font-size: 2.5rem;
     color: #8C8984; }
+  .container .container__icon--scale:hover {
+    -webkit-transition: all 0.5s ease;
+    /* Safari and Chrome */
+    -moz-transition: all 0.5s ease;
+    /* Firefox */
+    -o-transition: all 0.5s ease;
+    /* IE 9 */
+    -ms-transition: all 0.5s ease;
+    /* Opera */
+    transition: all 0.5s ease;
+    -webkit-transform: scale(1.2);
+    /* Safari and Chrome */
+    -moz-transform: scale(1.2);
+    /* Firefox */
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    -o-transform: scale(1.2);
+    /* Opera */
+    transform: scale(1.2); }
   .container .container__icon--black {
     color: #444; }
   .container .container__icon--blue {
@@ -944,15 +963,15 @@ Hacks
     -ms-box-shadow: 3px 6px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 3px 6px 0 rgba(0, 0, 0, 0.1); }
     .container .container__image-border:hover {
-      -webkit-transition: all 1s ease;
+      -webkit-transition: all 0.5s ease;
       /* Safari and Chrome */
-      -moz-transition: all 1s ease;
+      -moz-transition: all 0.5s ease;
       /* Firefox */
-      -o-transition: all 1s ease;
+      -o-transition: all 0.5s ease;
       /* IE 9 */
-      -ms-transition: all 1s ease;
+      -ms-transition: all 0.5s ease;
       /* Opera */
-      transition: all 1s ease;
+      transition: all 0.5s ease;
       -webkit-transform: scale(1.25);
       /* Safari and Chrome */
       -moz-transform: scale(1.1);
@@ -961,11 +980,14 @@ Hacks
       /* IE 9 */
       -o-transform: scale(1.1);
       /* Opera */
-      transform: scale(1.1); }
+      transform: translate(0px, -5px); }
     @media (min-width: 634px) {
       .container .container__image-border {
-        width: 40%; } }
+        width: 70%; } }
     @media (min-width: 768px) {
+      .container .container__image-border {
+        width: 60%; } }
+    @media (min-width: 960px) {
       .container .container__image-border {
         width: 100%; } }
   .container .container__image--small {
@@ -1090,10 +1112,17 @@ Hacks
     .container--min-height {
       min-height: 302px; } }
 
-.container--half-breakpoint-medium {
+.container--half-breakpoint-small-medium {
   width: 100%; }
-  @media (min-width: 768px) {
-    .container--half-breakpoint-medium {
+  @media (min-width: 634px) {
+    .container--half-breakpoint-small-medium {
+      width: 50%; } }
+
+.container--half-breakpoint-medium-large {
+  width: 100%;
+  padding: 0; }
+  @media (min-width: 960px) {
+    .container--half-breakpoint-medium-large {
       width: 50%; } }
 
 .container--link {
