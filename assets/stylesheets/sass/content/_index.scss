@@ -19,9 +19,11 @@
 		padding: 10px;
 		color: $grey-blue;
 		line-height: 37px;
+		text-align: justify;
 		@include font-size(22);
 		
 		@include breakpoint(small) {
+			text-align: center;
 			padding: 10px 40px;
 		}
 
@@ -56,6 +58,17 @@
 		color: $grey-blue;
 		@include font-size(18);
 		line-height: 25px;
+		text-align: justify;
+		
+		@include breakpoint(small) {
+			text-align: center;
+		}
+	}
+
+	@include bem-element(span) {
+		color:$grey-blue;
+		margin: 0;
+		@include font-size(16);
 	}
 
 	@include bem-element(text, small) {
@@ -70,6 +83,7 @@
 	@include bem-element(icon, small) {
 		@include font-size(25);
 		color: $grey-blue;
+		margin: 10px;
 	}
 
 

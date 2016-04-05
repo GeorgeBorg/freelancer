@@ -708,7 +708,7 @@ Hacks
   margin: 0;
   color: #FFF;
   text-align: center; }
-  .hero .hero__image {
+  .hero .hero__background-image {
     height: 100%;
     position: absolute;
     bottom: 0;
@@ -717,26 +717,37 @@ Hacks
     left: 0;
     z-index: -1; }
     @media (min-width: 960px) {
-      .hero .hero__image {
+      .hero .hero__background-image {
         width: 100%;
         height: auto; } }
   .hero .hero__header {
-    font-size: 50px;
-    font-size: 5rem;
-    margin-top: 250px;
-    color: #FFF; }
+    font-size: 30px;
+    font-size: 3rem;
+    margin-top: 220px;
+    margin-bottom: 20px; }
+    @media (min-width: 520px) {
+      .hero .hero__header {
+        font-size: 50px;
+        font-size: 5rem; } }
     @media (min-width: 634px) {
       .hero .hero__header {
         font-size: 65px;
         font-size: 6.5rem; } }
   .hero .hero__subheader {
-    font-size: 18px;
-    font-size: 1.8rem;
-    margin-top: 25px; }
+    font-size: 22px;
+    font-size: 2.2rem; }
     @media (min-width: 768px) {
       .hero .hero__subheader {
-        font-size: 22px;
-        font-size: 2.2rem; } }
+        font-size: 28px;
+        font-size: 2.8rem; } }
+  .hero .hero__subheader--small {
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-top: 55px; }
+    @media (min-width: 768px) {
+      .hero .hero__subheader--small {
+        font-size: 20px;
+        font-size: 2rem; } }
   .hero .hero__icon {
     color: #E66B5C;
     font-size: 20px;
@@ -789,10 +800,12 @@ Hacks
     padding: 10px;
     color: #8C8984;
     line-height: 37px;
+    text-align: justify;
     font-size: 22px;
     font-size: 2.2rem; }
     @media (min-width: 520px) {
       .section .section__text {
+        text-align: center;
         padding: 10px 40px; } }
     @media (min-width: 768px) {
       .section .section__text {
@@ -817,7 +830,16 @@ Hacks
     color: #8C8984;
     font-size: 18px;
     font-size: 1.8rem;
-    line-height: 25px; }
+    line-height: 25px;
+    text-align: justify; }
+    @media (min-width: 520px) {
+      .container .container__text {
+        text-align: center; } }
+  .container .container__span {
+    color: #8C8984;
+    margin: 0;
+    font-size: 16px;
+    font-size: 1.6rem; }
   .container .container__text--small {
     font-size: 14px;
     font-size: 1.4rem; }
@@ -828,7 +850,8 @@ Hacks
   .container .container__icon--small {
     font-size: 25px;
     font-size: 2.5rem;
-    color: #8C8984; }
+    color: #8C8984;
+    margin: 10px; }
   .container .container__icon--scale:hover {
     color: #444;
     -webkit-transition: all 0.2s ease;

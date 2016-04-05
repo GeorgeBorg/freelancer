@@ -11,7 +11,7 @@
 	color:$white;
 	text-align: center;
 
-	@include bem-element(image) {
+	@include bem-element(background-image) {
 		height: 100%;
 		position: absolute;
 		bottom: 0;
@@ -27,9 +27,13 @@
 	}
 
 	@include bem-element(header) {
-		@include font-size(50);
-		margin-top: 250px;
-		color: $white;
+		@include font-size(30);
+		margin-top: 220px;
+		margin-bottom: 20px;
+		
+		@include breakpoint(small) {
+			@include font-size(50);
+		}
 
 		@include breakpoint(small-medium) {
 			@include font-size(65);
@@ -37,12 +41,21 @@
 	}
 
 	@include bem-element(subheader) {
-		@include font-size(18);
-		margin-top: 25px;
+		@include font-size(22);
     	
 	    	@include breakpoint(medium) {
-			@include font-size(22);
+			@include font-size(28);
 		}
+	}
+
+	@include bem-element(subheader, small) {
+		@include font-size(16);
+		margin-top: 55px;
+    	
+	    	@include breakpoint(medium) {
+			@include font-size(20);
+		}
+		
 	}
 
 	@include bem-element(icon) {
