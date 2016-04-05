@@ -815,6 +815,15 @@ Hacks
   background-color: #F4F4F4; }
 
 /* --------------------------------------------------
+   Icon Break
+-------------------------------------------------- */
+.icon-break {
+  text-align: center;
+  width: 30px;
+  margin: 0;
+  padding: 0; }
+
+/* --------------------------------------------------
    Containers
 -------------------------------------------------- */
 .container {
@@ -853,7 +862,6 @@ Hacks
     color: #8C8984;
     margin: 10px; }
   .container .container__icon--scale:hover {
-    color: #444;
     -webkit-transition: all 0.2s ease;
     /* Safari and Chrome */
     -moz-transition: all 0.2s ease;
@@ -872,6 +880,10 @@ Hacks
     -o-transform: scale(1.1);
     /* Opera */
     transform: scale(1.1); }
+  .container .fa-github {
+    color: #333; }
+  .container .fa-twitter {
+    color: #1DA1F2; }
   .container .container__icon--blue {
     color: #25A0CF; }
   .container .container__icon--red {

@@ -37,6 +37,16 @@
 	background-color: $lightgrey;
 }
 
+/* --------------------------------------------------
+   Icon Break
+-------------------------------------------------- */
+
+@include bem-block(icon-break) {
+	text-align: center;
+	width: 30px;
+	margin: 0;
+	padding: 0;
+}
 
 
 /* --------------------------------------------------
@@ -88,7 +98,6 @@
 
 
 	@include bem-element(icon, scale, hover) {
-		color:$grey4;
 		-webkit-transition: all 0.2s ease; /* Safari and Chrome */
 		-moz-transition: all 0.2s ease; /* Firefox */
 		-o-transition: all 0.2s ease; /* IE 9 */
@@ -99,6 +108,14 @@
 		-ms-transform:scale(1.1); /* IE 9 */
 		-o-transform:scale(1.1); /* Opera */
 		transform:scale(1.1);
+	}
+
+	.fa-github {
+		color:$grey3;
+	}
+
+	.fa-twitter {
+		color:#1DA1F2;
 	}
 
 	@include bem-element(icon, blue) {
