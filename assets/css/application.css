@@ -743,7 +743,7 @@ Hacks
         font-size: 6.5rem; } }
     @media only screen and (min-width: 435px) and (max-width: 773px) and (orientation: landscape) {
       .hero .hero__header {
-        margin-top: 70px;
+        margin-top: 90px;
         font-size: 50px;
         font-size: 5rem; } }
   .hero .hero__subheader {

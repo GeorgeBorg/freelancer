@@ -50,9 +50,10 @@
 		}
 
 		@include screen(435px, 773px, landscape) {
-			margin-top: 70px;
+			margin-top: 90px;
 			@include font-size(50);
 		}
+		
 	}
 
 	@include bem-element(subheader) {
