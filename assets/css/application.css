@@ -733,6 +733,11 @@ Hacks
       .hero .hero__header {
         font-size: 65px;
         font-size: 6.5rem; } }
+    @media only screen and (min-width: 435px) and (max-width: 773px) and (orientation: landscape) {
+      .hero .hero__header {
+        margin-top: 70px;
+        font-size: 50px;
+        font-size: 5rem; } }
   .hero .hero__subheader {
     font-size: 22px;
     font-size: 2.2rem; }
@@ -748,6 +753,11 @@ Hacks
       .hero .hero__subheader--small {
         font-size: 20px;
         font-size: 2rem; } }
+    @media only screen and (min-width: 435px) and (max-width: 773px) and (orientation: landscape) {
+      .hero .hero__subheader--small {
+        margin-top: 21px;
+        font-size: 13px;
+        font-size: 1.3rem; } }
   .hero .hero__icon {
     color: #E66B5C;
     font-size: 20px;
@@ -766,6 +776,11 @@ Hacks
     cursor: pointer;
     -webkit-animation: pulsate 2s ease-out;
     -webkit-animation-iteration-count: infinite; }
+    @media only screen and (min-width: 435px) and (max-width: 773px) and (orientation: landscape) {
+      .hero .hero__button {
+        bottom: 20px;
+        font-size: 40px;
+        font-size: 4rem; } }
   .hero .hero__button-text {
     opacity: 0;
     position: absolute;
@@ -1014,7 +1029,7 @@ Hacks
   min-height: 0; }
   @media (min-width: 634px) {
     .container--min-height {
-      min-height: 262px; } }
+      min-height: 280px; } }
   @media (min-width: 768px) {
     .container--min-height {
       min-height: 302px; } }
@@ -1034,9 +1049,16 @@ Hacks
 
 .container--link {
   cursor: pointer;
-  height: 100%; }
+  height: 100%;
+  min-height: 0; }
   .container--link:hover {
     opacity: 0.9; }
+  @media (min-width: 520px) {
+    .container--link {
+      min-height: 280px; } }
+  @media (min-width: 768px) {
+    .container--link {
+      min-height: 0; } }
 
 /* --------------------------------------------------
    Slider

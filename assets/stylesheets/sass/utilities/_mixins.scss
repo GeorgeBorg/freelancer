@@ -145,3 +145,9 @@
 		#{$prefix}#{$prop}: $val;
 	}
 }
+
+@mixin landscape() {
+  @include mq($orientation: landscape) {
+    @content;
+  }
+}

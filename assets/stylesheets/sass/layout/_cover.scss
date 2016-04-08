@@ -30,13 +30,18 @@
 		@include font-size(30);
 		margin-top: 220px;
 		margin-bottom: 20px;
-		
+
 		@include breakpoint(small) {
 			@include font-size(50);
 		}
 
 		@include breakpoint(small-medium) {
 			@include font-size(65);
+		}
+
+		@include screen(435px, 773px, landscape) {
+			margin-top: 70px;
+			@include font-size(50);
 		}
 	}
 
@@ -52,8 +57,13 @@
 		@include font-size(16);
 		margin-top: 55px;
     	
-	    	@include breakpoint(medium) {
+	    @include breakpoint(medium) {
 			@include font-size(20);
+		}
+
+		@include screen(435px, 773px, landscape) {
+			margin-top: 21px;
+			@include font-size(13);
 		}
 		
 	}
@@ -76,6 +86,11 @@
 		cursor: pointer;
 		-webkit-animation: pulsate 2s ease-out;
 		-webkit-animation-iteration-count: infinite; 
+		
+		@include screen(435px, 773px, landscape) {
+			bottom: 20px;
+			@include font-size(40);
+		}
 	}
 
 	@include bem-element(button-text) {

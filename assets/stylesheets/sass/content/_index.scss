@@ -277,7 +277,7 @@
 	min-height: 0;
 	
 	@include breakpoint(small-medium) {
-		min-height: 262px;
+		min-height: 280px;
 	}
 
 	@include breakpoint(medium) {
@@ -305,10 +305,21 @@
 @include bem-block(container, link) {
 	cursor: pointer;
 	height: 100%;
+	min-height: 0;
+
 	
 	&:hover {
 		opacity: 0.9;
 	}
+	
+	@include breakpoint(small) {
+		min-height: 280px;
+	}
+
+	@include breakpoint(medium) {
+		min-height: 0;
+	}
+
 }
 
 /* --------------------------------------------------

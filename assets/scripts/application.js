@@ -119,23 +119,27 @@ $(document).on('ready page:load', function () {
 });
 /* --------------------------------------------------
    Contact Form
--------------------------------------------------- */
+// -------------------------------------------------- */
 
-$(function() {
-    $('.contact-thank').hide();
-
-    $('.contact-submit').click(function() {
-        $.post('mailhandler.php', { email: $('.contact-email').val(), name: $('.contact-name').val(), message: $('.contact-message').val() })
-            .done(function(data) {
-                console.log(data);
-                $('.contact-name').val('');
-                $('.contact-email').val('');
-                $('.contact-message').val('');
-                $('.contact-name').hide();
-                $('.contact-email').hide();
-                $('.contact-message').hide();
-                $('.contact-submit').hide();
-                $('.contact-thank').show();                 
-            });
+$("#contact-form").validate({
+  submitHandler: function(form) {
+    $.ajax({
+      url: "//formspree.io/georgeborg00@hotmail.com", 
+      method: "POST",
+      data: {
+        name: $(form).find("input[name='name']").val(),
+        _replyto: $(form).find("input[name='_replyto']").val(),
+        message: $(form).find("textarea[name='message']").val()
+      },
+      dataType: "json",
+      success: function() {
+        $("#submit-success").fadeIn();
+        $("#contact-form").fadeOut();
+      },
+      error: function() {
+        $("#submit-errors").fadeIn();        
+      }
     });
+  }
 });
+
