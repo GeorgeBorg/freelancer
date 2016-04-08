@@ -24,6 +24,16 @@
 			width: 100%;
 			height: auto;
 		}
+
+		@include screen(435px, 773px, landscape) {
+			height: auto;
+			width: 100%;
+		}
+
+		@include ipad(landscape) {
+			height: auto;
+			width: 130%;
+		}
 	}
 
 	@include bem-element(header) {
