@@ -124,7 +124,7 @@ $(document).on('ready page:load', function () {
 $("#contact-form").validate({
   submitHandler: function(form) {
     $.ajax({
-      url: "//formspree.io/georgeborg00@hotmail.com", 
+      url: "//formspree.io/info@jackandgeorge.co", 
       method: "POST",
       data: {
         name: $(form).find("input[name='name']").val(),
@@ -133,11 +133,11 @@ $("#contact-form").validate({
       },
       dataType: "json",
       success: function() {
-        $("#submit-success").fadeIn();
-        $("#contact-form").fadeOut();
+        $("#submit-success").toggle();
+        $("#contact-form").toggle();
       },
       error: function() {
-        $("#submit-errors").fadeIn();        
+        $("#submit-errors").toggle();        
       }
     });
   }
