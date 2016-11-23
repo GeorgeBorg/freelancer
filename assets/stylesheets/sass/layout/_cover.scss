@@ -10,31 +10,37 @@
 	margin: 0;
 	color:$white;
 	text-align: center;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(/assets/images/A-Dam-min.jpg);
 
-	@include bem-element(background-image) {
-		height: 100%;
-		position: absolute;
-		bottom: 0;
-		margin: 0 auto;
-		width: auto;
-		left: 0;
-		z-index: -1;
+
+	// @include bem-element(background-image) {
+	// 	height: 100%;
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	margin: 0 auto;
+	// 	width: auto;
+	// 	left: 0;
+	// 	z-index: -1;
 		
-		@include breakpoint(medium-large) {
-			width: 100%;
-			height: auto;
-		}
+	// 	@include breakpoint(medium-large) {
+	// 		width: 100%;
+	// 		height: auto;
+	// 	}
 
-		@include screen(435px, 773px, landscape) {
-			height: auto;
-			width: 100%;
-		}
+	// 	@include screen(435px, 773px, landscape) {
+	// 		height: auto;
+	// 		width: 100%;
+	// 	}
 
-		@include ipad(landscape) {
-			height: auto;
-			width: 130%;
-		}
-	}
+	// 	@include ipad(landscape) {
+	// 		height: auto;
+	// 		width: 130%;
+	// 	}
+	// }
 
 	@include bem-element(header) {
 		@include font-size(30);
